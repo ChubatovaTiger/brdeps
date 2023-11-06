@@ -28,7 +28,7 @@ version = "2023.05"
 project {
 
     vcsRoot(HttpsGithubComChubatovaTigerChubatovaGradleTestsBackup)
-vcsRoot(DotnetTests)
+vcsRoot(DotnetTests2)
     buildType(Build1)
     buildType(Build3)
 buildType(Build4)
