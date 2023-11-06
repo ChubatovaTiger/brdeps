@@ -28,10 +28,9 @@ version = "2023.05"
 project {
 
     vcsRoot(HttpsGithubComChubatovaTigerChubatovaGradleTestsBackup)
-vcsRoot(DotnetTests2)
+
     buildType(Build1)
     buildType(Build3)
-buildType(Build4)
 }
 
 object Build1 : BuildType({
@@ -40,13 +39,9 @@ object Build1 : BuildType({
     vcs {
         root(DslContext.settingsRoot)
         root(HttpsGithubComChubatovaTigerChubatovaGradleTestsBackup, "+:. => gradle")
-root(DotnetTests2, "+:. => dotnet")
     }
 
     dependencies {
-        snapshot(Build4) {
-            reuseBuilds = ReuseBuilds.NO
-        }
         snapshot(Build3) {
             reuseBuilds = ReuseBuilds.NO
         }
@@ -59,17 +54,6 @@ object Build3 : BuildType({
     vcs {
         root(DslContext.settingsRoot)
         root(HttpsGithubComChubatovaTigerChubatovaGradleTestsBackup, "+:. => gradle")
-root(DotnetTests2, "+:. => dotnet")
-    }
-})
-
-object Build4 : BuildType({
-    name = "build4"
-
-    vcs {
-        root(DslContext.settingsRoot)
-        root(HttpsGithubComChubatovaTigerChubatovaGradleTestsBackup, "+:. => gradle")
-root(DotnetTests2, "+:. => dotnet")
     }
 })
 
@@ -77,11 +61,4 @@ object HttpsGithubComChubatovaTigerChubatovaGradleTestsBackup : GitVcsRoot({
     name = "https://github.com/ChubatovaTiger/ChubatovaGradleTestsBackup"
     url = "https://github.com/ChubatovaTiger/ChubatovaGradleTestsBackup"
     branch = "refs/heads/master"
-})
-
-object DotnetTests2 : GitVcsRoot({
-    name = "DotnetTests2"
- //id("DotnetTests2")
-    url = "https://github.com/ChubatovaTiger/DotNetTestsSamples"
-    branch = "refs/heads/main"
 })
