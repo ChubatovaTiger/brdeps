@@ -47,6 +47,9 @@ root(DotnetTests, "+:. => dotnet")
         snapshot(Build2) {
             reuseBuilds = ReuseBuilds.NO
         }
+        snapshot(Build3) {
+            reuseBuilds = ReuseBuilds.NO
+        }
     }
 })
 
