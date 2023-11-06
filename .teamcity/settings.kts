@@ -34,6 +34,10 @@ project {
 
 object Build1 : BuildType({
     name = "build1"
+
+    vcs {
+        root(DslContext.settingsRoot)
+    }
 })
 
 object HttpsGithubComChubatovaTigerChubatovaGradleTestsBackup : GitVcsRoot({
