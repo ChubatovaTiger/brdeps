@@ -64,7 +64,7 @@ root(DotnetTests2, "+:. => dotnet")
 })
 
 object Build4 : BuildType({
-    name = "build4"
+    name = "Build4"
 
     vcs {
         root(DslContext.settingsRoot)
