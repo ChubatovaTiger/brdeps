@@ -40,6 +40,12 @@ object Build1 : BuildType({
         root(DslContext.settingsRoot)
         root(HttpsGithubComChubatovaTigerChubatovaGradleTestsBackup, "+:. => gradle")
     }
+
+    dependencies {
+        snapshot(Build3) {
+            reuseBuilds = ReuseBuilds.NO
+        }
+    }
 })
 
 object Build3 : BuildType({
