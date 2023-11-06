@@ -28,7 +28,7 @@ version = "2023.05"
 project {
 
     vcsRoot(HttpsGithubComChubatovaTigerChubatovaGradleTestsBackup)
-vcsRoot(DotnetTests2)
+vcsRoot(DotnetTests5)
     buildType(Build1)
     buildType(Build3)
 buildType(Build4)
@@ -40,7 +40,7 @@ object Build1 : BuildType({
     vcs {
         root(DslContext.settingsRoot)
         root(HttpsGithubComChubatovaTigerChubatovaGradleTestsBackup, "+:. => gradle")
-root(DotnetTests2, "+:. => dotnet")
+root(DotnetTests5, "+:. => dotnet")
     }
 
     dependencies {
@@ -59,7 +59,7 @@ object Build3 : BuildType({
     vcs {
         root(DslContext.settingsRoot)
         root(HttpsGithubComChubatovaTigerChubatovaGradleTestsBackup, "+:. => gradle")
-root(DotnetTests2, "+:. => dotnet")
+root(DotnetTests5, "+:. => dotnet")
     }
 })
 
@@ -69,7 +69,7 @@ object Build4 : BuildType({
     vcs {
         root(DslContext.settingsRoot)
         root(HttpsGithubComChubatovaTigerChubatovaGradleTestsBackup, "+:. => gradle")
-root(DotnetTests2, "+:. => dotnet")
+root(DotnetTests5, "+:. => dotnet")
     }
 })
 
@@ -79,9 +79,9 @@ object HttpsGithubComChubatovaTigerChubatovaGradleTestsBackup : GitVcsRoot({
     branch = "refs/heads/master"
 })
 
-object DotnetTests2 : GitVcsRoot({
-    name = "DotnetTests2"
- //id("DotnetTests2")
+object DotnetTests5 : GitVcsRoot({
+    name = "DotnetTests5"
+ //id("DotnetTests5")
     url = "https://github.com/ChubatovaTiger/DotNetTestsSamples"
     branch = "refs/heads/main"
 })
