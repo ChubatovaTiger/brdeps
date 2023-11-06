@@ -81,7 +81,7 @@ object HttpsGithubComChubatovaTigerChubatovaGradleTestsBackup : GitVcsRoot({
 
 object DotnetTests2 : GitVcsRoot({
     name = "DotnetTests2"
- id("DotnetTests2")
+ //id("DotnetTests2")
     url = "https://github.com/ChubatovaTiger/DotNetTestsSamples"
     branch = "refs/heads/main"
 })
