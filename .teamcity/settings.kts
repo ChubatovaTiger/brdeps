@@ -29,8 +29,8 @@ project {
 
     vcsRoot(HttpsGithubComChubatovaTigerChubatovaGradleTestsBackup)
 
-
     buildType(Build1)
+    buildType(Build3)
 }
 
 object Build1 : BuildType({
@@ -39,8 +39,11 @@ object Build1 : BuildType({
     vcs {
         root(DslContext.settingsRoot)
         root(HttpsGithubComChubatovaTigerChubatovaGradleTestsBackup, "+:. => gradle")
-    
     }
+})
+
+object Build3 : BuildType({
+    name = "build3"
 })
 
 object HttpsGithubComChubatovaTigerChubatovaGradleTestsBackup : GitVcsRoot({
@@ -48,5 +51,3 @@ object HttpsGithubComChubatovaTigerChubatovaGradleTestsBackup : GitVcsRoot({
     url = "https://github.com/ChubatovaTiger/ChubatovaGradleTestsBackup"
     branch = "refs/heads/master"
 })
-
-
