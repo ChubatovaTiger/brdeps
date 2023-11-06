@@ -37,7 +37,7 @@ object Build1 : BuildType({
 
     vcs {
         root(DslContext.settingsRoot)
-        root(HttpsGithubComChubatovaTigerChubatovaGradleTestsBackup)
+        root(HttpsGithubComChubatovaTigerChubatovaGradleTestsBackup, "+:. => gradle")
     }
 })
 
