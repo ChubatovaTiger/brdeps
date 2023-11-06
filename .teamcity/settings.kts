@@ -28,7 +28,7 @@ version = "2023.05"
 project {
 
     vcsRoot(HttpsGithubComChubatovaTigerChubatovaGradleTestsBackup)
-
+     vcsRoot(DotnetTests)
 
     buildType(Build1)
 }
@@ -39,7 +39,7 @@ object Build1 : BuildType({
     vcs {
         root(DslContext.settingsRoot)
         root(HttpsGithubComChubatovaTigerChubatovaGradleTestsBackup, "+:. => gradle")
-    
+        root(DotnetTests, "+:. => dotnet")
     }
 })
 
@@ -49,4 +49,8 @@ object HttpsGithubComChubatovaTigerChubatovaGradleTestsBackup : GitVcsRoot({
     branch = "refs/heads/master"
 })
 
-
+object DotnetTests : GitVcsRoot({
+    name = "DotnetTests"
+    url = "https://github.com/ChubatovaTiger/DotNetTestsSamples"
+    branch = "refs/heads/main"
+})
