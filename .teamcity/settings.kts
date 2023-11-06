@@ -31,6 +31,7 @@ project {
 vcsRoot(DotnetTests)
     buildType(Build1)
     buildType(Build3)
+buildType(Build2)
 }
 
 object Build1 : BuildType({
@@ -43,7 +44,7 @@ root(DotnetTests, "+:. => dotnet")
     }
 
     dependencies {
-        snapshot(Build3) {
+        snapshot(Build2) {
             reuseBuilds = ReuseBuilds.NO
         }
     }
@@ -51,6 +52,16 @@ root(DotnetTests, "+:. => dotnet")
 
 object Build3 : BuildType({
     name = "build3"
+
+    vcs {
+        root(DslContext.settingsRoot)
+        root(HttpsGithubComChubatovaTigerChubatovaGradleTestsBackup, "+:. => gradle")
+root(DotnetTests, "+:. => dotnet")
+    }
+})
+
+object Build2 : BuildType({
+    name = "build2"
 
     vcs {
         root(DslContext.settingsRoot)
