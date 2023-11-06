@@ -31,6 +31,7 @@ project {
      vcsRoot(DotnetTests)
 
     buildType(Build1)
+buildType(Build2)
 }
 
 object Build1 : BuildType({
@@ -42,6 +43,17 @@ object Build1 : BuildType({
         root(DotnetTests, "+:. => dotnet")
     }
 })
+
+object Build2 : BuildType({
+    name = "build2"
+
+    vcs {
+        root(DslContext.settingsRoot, "+:. => vs")
+        root(HttpsGithubComChubatovaTigerChubatovaGradleTestsBackup, "+:. => gradle")
+        root(DotnetTests, "+:. => dotnet")
+    }
+})
+
 
 object HttpsGithubComChubatovaTigerChubatovaGradleTestsBackup : GitVcsRoot({
     name = "https://github.com/ChubatovaTiger/ChubatovaGradleTestsBackup"
